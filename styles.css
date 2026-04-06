@@ -1,0 +1,122 @@
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #1f1f1f;
+    background-image: url("bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+header {
+    background-color: rgba(0,0,0,0.5);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: white;
+}
+
+nav a {
+    color: white;
+    margin-left: 1rem;
+}
+
+h2 {
+    color:white;
+}
+
+textarea {
+    width: 100%;
+    background-color: rgba(0,0,0,0);
+    padding: 0;
+    border-color: rgba(0,0,0,0);
+    outline: none;
+    resize: none;
+}
+
+button {
+    border-color: white;
+    border-radius: 5px;
+    border-width: 3px;
+    background-color: rgba(0,0,0,0.25);
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+.note {
+    width: 120px;
+    height: 120px;
+    background-image: url("https://img.freepik.com/free-vector/yellow-note-paper-with-red-pin_1284-42430.jpg?semt=ais_incoming&w=740&q=80");
+    padding: 20px;
+    position: absolute;
+    box-shadow: 0px 0px 10px;
+}
+
+.board {
+    width: 1300px;
+    height: 700px;
+    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/019/926/112/small/cork-board-isolated-on-white-with-clipping-path-free-photo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    animation: float 2s ease-in-out infinite;
+    box-shadow: 0px 0px 50px 10px;
+}
+
+.notetext {
+    font-size: 14px;
+    margin: 0;
+    word-wrap: break-word;
+    width: 100%;
+    height: 80%;
+}
+
+.authortext {
+    font-size: 14px;
+    margin: 0;
+    word-wrap: break-word;
+    width: 100%;
+    height: 20%;
+    text-align: end;
+}
+
+.containera {
+    display: flex;
+    justify-content: space-between;
+    margin: auto auto;
+    align-items: center;
+    width: 1600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.containerb {
+    display: flex;
+    justify-content: center;
+    margin: auto auto;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    width: 200px;
+    height: 700px;
+    animation: float 1.5s ease-in-out infinite;
+}
+
