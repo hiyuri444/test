@@ -9,9 +9,11 @@ body {
     font-family: Arial, sans-serif;
     background: #1f1f1f;
     background-image: url("bg.png");
+    
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
+    overflow: hidden;
 }
 
 header {
@@ -42,8 +44,13 @@ textarea {
     background-color: rgba(0,0,0,0);
     padding: 0;
     border-color: rgba(0,0,0,0);
+    color: black;
     outline: none;
     resize: none;
+}
+
+textarea::placeholder {
+    color: #1f1f1f;
 }
 
 button {
@@ -62,25 +69,28 @@ button {
 .note {
     width: 120px;
     height: 120px;
-    background-image: url("https://img.freepik.com/free-vector/yellow-note-paper-with-red-pin_1284-42430.jpg?semt=ais_incoming&w=740&q=80");
+    background-image: url("note.jpg");
+    color:#1f1f1f    ;
     padding: 20px;
     position: absolute;
-    box-shadow: 0px 0px 10px;
+    box-shadow: 0px 0px 20px;
 }
 
 .board {
     width: 1300px;
     height: 700px;
-    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/019/926/112/small/cork-board-isolated-on-white-with-clipping-path-free-photo.jpg");
+    background-image: url("board.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     animation: float 2s ease-in-out infinite;
-    box-shadow: 0px 0px 50px 10px;
+    box-shadow: 0px 20px 50px 10px;
+    color: black;
 }
 
 .notetext {
     font-size: 14px;
+    letter-spacing: 1px;
     margin: 0;
     word-wrap: break-word;
     width: 100%;

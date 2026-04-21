@@ -1,6 +1,8 @@
 const board = document.getElementById("board")
 const button = document.getElementById("placebutton")
 const timerdisplay = document.getElementById("timer")
+const notetextarea = document.getElementById("notetextarea")
+const authortextarea = document.getElementById("authortextarea")
 let activenote
 let offset
 let notewidth
@@ -21,12 +23,12 @@ function createactivenote() {
 
     notetext = document.createElement("div");
     notetext.classList.add("notetext");
-    notetext.textContent = document.getElementById("notetextarea").value;
+    notetext.textContent = notetextarea.value;
     activenote.appendChild(notetext)
 
     authortext = document.createElement("div");
     authortext.classList.add("authortext");
-    authortext.textContent = "- " + document.getElementById("authortextarea").value;
+    authortext.textContent = "- " + authortextarea.value;
     activenote.appendChild(authortext)
 }
 
@@ -44,10 +46,15 @@ function updatetimerdisplay() {
     }
 }
 
+function santizeinput() {
+  this.value = this.value.replace(/\n/g, "");
+}
+
 // todo:
 // add clamping when moving note
 // make notes removable
 // note types
+// check if notes are valid
 
 button.addEventListener("click", (event) => {
 
@@ -75,11 +82,14 @@ board.addEventListener("click", (event) => {
             activenote = null
         } else {
             activenote = null
-            timer = 10
+            timer = 120
             updatetimerdisplay()
         }
     }
 });
+
+notetextarea.addEventListener("input", santizeinput);
+authortextarea.addEventListener("input", santizeinput)
 
 setInterval(() => {
     timer = timer - 1
